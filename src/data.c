@@ -101,7 +101,11 @@ static inline unsigned int skb_padding(struct sk_buff *skb)
 
 static inline void skb_reset(struct sk_buff *skb)
 {
+#if LINUX_VERSION_CODE < KERNEL_VERSION(3, 12, 0)
+	skb_scrub_packet(skb);
+#else
 	skb_scrub_packet(skb, false);
+#endif
 	memset(&skb->headers_start, 0, offsetof(struct sk_buff, headers_end) - offsetof(struct sk_buff, headers_start));
 	skb->queue_mapping = 0;
 	skb->nohdr = 0;

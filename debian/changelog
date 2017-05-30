@@ -1,8 +1,9 @@
-wireguard (0.0.20170530-0instart1) precise; urgency=low
+wireguard (0.0.20170530~0instart2) precise; urgency=low
 
   * start over using upstream git repo git://git.zx2c4.com/WireGuard
+  * Build fixes
 
- -- Michael Weber <mweber@instartlogic.com>  Tue, 30 May 2017 11:23:14 -0700
+ -- Michael Weber <mweber@instartlogic.com>  Tue, 30 May 2017 12:34:23 -0700
 
 wireguard (0.0.20170517-wg2~xenial) xenial; urgency=medium
 

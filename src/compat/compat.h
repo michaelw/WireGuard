@@ -194,7 +194,7 @@ static inline u32 prandom_u32_max(u32 ep_ro)
 }
 #endif
 
-#if LINUX_VERSION_CODE < KERNEL_VERSION(3, 10, 75)
+#if LINUX_VERSION_CODE < KERNEL_VERSION(3, 12, 0)
 #define U8_MAX ((u8)~0U)
 #define S8_MAX ((s8)(U8_MAX >> 1))
 #define S8_MIN ((s8)(-S8_MAX - 1))
@@ -209,7 +209,7 @@ static inline u32 prandom_u32_max(u32 ep_ro)
 #define S64_MIN ((s64)(-S64_MAX - 1))
 #endif
 
-#if LINUX_VERSION_CODE < KERNEL_VERSION(3, 10, 60)
+#if LINUX_VERSION_CODE < KERNEL_VERSION(3, 12, 0)
 /* Making this static may very well invalidate its usefulness,
  * but so it goes with compat code. */
 static inline void memzero_explicit(void *s, size_t count)
